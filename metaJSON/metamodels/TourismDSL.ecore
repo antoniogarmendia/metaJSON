@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="example" nsURI="http://miso.es/dsls/tourismDSL.ecore" nsPrefix="ex">
+  <eClassifiers xsi:type="ecore:EClass" name="Route">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="places" ordered="false"
+        upperBound="-1" eType="#//Place" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="events" ordered="false"
+        upperBound="-1" eType="#//Event" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="people" ordered="false"
+        upperBound="-1" eType="#//Person" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Place" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="openingHours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="next" eType="#//Transportation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="opinions" ordered="false"
+        upperBound="-1" eType="#//Opinion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nearby" ordered="false"
+        upperBound="-1" eType="#//Place"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cultural" abstract="true" eSuperTypes="#//Place"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Museum" eSuperTypes="#//Cultural"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Theater" eSuperTypes="#//Cultural"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sculpture" eSuperTypes="#//Cultural"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Building" eSuperTypes="#//Cultural"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Gastronomy" abstract="true" eSuperTypes="#//Place"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Restaurant" eSuperTypes="#//Gastronomy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Bar" eSuperTypes="#//Gastronomy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Cafe" eSuperTypes="#//Gastronomy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Event">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" lowerBound="1"
+        eType="#//Place"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transportation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" lowerBound="1" eType="#//TransportationKind"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="#//Place"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Person">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="current" eType="#//Place"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="history" ordered="false"
+        upperBound="-1" eType="#//Place"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Opinion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rate" lowerBound="1" eType="#//Rate"
+        defaultValueLiteral="average"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="opinion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="#//Person"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TransportationKind">
+    <eLiterals name="any"/>
+    <eLiterals name="onFoot" value="1"/>
+    <eLiterals name="onTrain" value="2"/>
+    <eLiterals name="onBus" value="3"/>
+    <eLiterals name="onCar" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Rate">
+    <eLiterals name="terrible" value="1"/>
+    <eLiterals name="bad" value="2"/>
+    <eLiterals name="average" value="3"/>
+    <eLiterals name="good" value="4"/>
+    <eLiterals name="excellent" value="5"/>
+  </eClassifiers>
+</ecore:EPackage>

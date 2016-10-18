@@ -1,0 +1,2019 @@
+{"name" : "ACG",
+ "classes" : [
+  {
+    "name" : "LocatedElement",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "ACG",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "metamodel",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "startsWith",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "ACGElement",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Function",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "context",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Attribute",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "context",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Parameter",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Node",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "element",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "mode",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "ASMNode",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "element",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "mode",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "CodeNode",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "element",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "mode",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "SimpleNode",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "element",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "mode",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "StatementBlock",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Statement",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "CompoundStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "ForEachStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "OnceStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "VariableStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "OperationStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "ConditionalStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "LetStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "AnalyzeStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "mode",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "ReportStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "severity",
+      "type" : "Severity",
+      "min" : "1",
+      "max" : "1",
+      "default" : "critic"
+    }
+    ]
+  },,
+  {
+    "name" : "FieldStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "ParamStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "EmitStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "LabelStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "NewStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "DupStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "DupX1Stat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "PopStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "SwapStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "IterateStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "EndIterateStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "GetAsmStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "FindMEStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "PushTStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "PushFStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "EmitWithOperandStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "PushStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "PushIStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "PushDStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "LoadStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "StoreStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "CallStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "PCallStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "SuperCallStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "GetStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "SetStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "EmitWithLabelRefStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "IfStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "GotoStat",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "VariableDecl",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Expression",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "VariableExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "SelfExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "LastExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "IfExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "IsAExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "type",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "LetExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "PropertyCallExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "NavigationExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "IteratorExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "OperationCallExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "OperatorCallExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "LiteralExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "OclUndefinedExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "CollectionExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "SequenceExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "BooleanExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "value",
+      "type" : "Boolean",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "IntegerExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "value",
+      "type" : "Integer",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "StringExp",
+    "attributes" : [
+    {
+      "name" : "location",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsBefore",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "commentsAfter",
+      "type" : "String",
+      "min" : "0",
+      "max" : "-1",
+      "default" : "null"
+    },
+    {
+      "name" : "value",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  }
+]}

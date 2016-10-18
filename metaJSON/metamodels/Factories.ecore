@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Factory" nsURI="http://mondo.org/factory" nsPrefix="factory">
+  <eClassifiers xsi:type="ecore:EClass" name="Factory">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//FactoryElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workers" upperBound="-1"
+        eType="#//Operator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FactoryElement" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Machine" abstract="true" eSuperTypes="#//FactoryElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="busy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="broken" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MachineStatus">
+    <eLiterals name="busy"/>
+    <eLiterals name="idle" value="1"/>
+    <eLiterals name="broken" value="2"/>
+    <eLiterals name="off" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Generator" eSuperTypes="#//Machine"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Assembler" eSuperTypes="#//Machine"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Terminator" eSuperTypes="#//Machine"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Conveyor" eSuperTypes="#//FactoryElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+        eType="#//FactoryElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" upperBound="-1"
+        eType="#//FactoryElement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parts" upperBound="-1"
+        eType="#//Part" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Part" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ident" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Handle" eSuperTypes="#//Part"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Knob" eSuperTypes="#//Part"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Hammer" eSuperTypes="#//Part"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Operator">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controls" eType="#//Machine"/>
+  </eClassifiers>
+</ecore:EPackage>

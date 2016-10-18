@@ -1,0 +1,41 @@
+@namespace(uri="http://mondo.org/factory", prefix="factory")
+package Factory;
+
+class Factory {
+  val FactoryElement[*] elements;
+  val Operator[*] workers;
+}
+
+abstract class FactoryElement {}
+
+abstract class Machine extends FactoryElement{
+	attr Boolean busy;
+	attr Boolean broken;
+}
+
+enum MachineStatus {
+	busy; idle; broken; off;
+}
+
+class Generator  extends Machine{}
+class Assembler  extends Machine{}
+class Terminator extends Machine{}
+
+class Conveyor extends FactoryElement {
+	ref  FactoryElement[*] inputs;
+	ref  FactoryElement[*] outputs;
+	attr double rate;
+	val  Part[*] parts;
+}
+
+abstract class Part{
+	attr String ident;
+}
+class Handle extends Part {}
+class Knob extends Part{}
+class Hammer extends Part{}
+
+class Operator {
+	attr String name;
+	ref  Machine[0..1] controls;
+}

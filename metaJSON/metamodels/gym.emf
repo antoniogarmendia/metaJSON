@@ -1,0 +1,33 @@
+@namespace(uri="http://mondo.org/test", prefix="test")
+package test;
+
+class Gymkhana {
+  ref Prueba eRef;
+}
+
+class Prueba {
+}
+
+class Pregunta extends Prueba {
+  attr String texto;
+  ref Opcion eRef;
+  ref PosicionInteres eRef1;
+}
+
+class Opcion {
+}
+
+class PosicionInteres {
+  attr String lat;
+  attr String longitud;
+}
+
+class EjecucionHymkhana {
+  ref Gymkhana eRef;
+  attr String timestamp;
+}
+
+class RespuestaPrueba {
+  ref Prueba eRef;
+}
+

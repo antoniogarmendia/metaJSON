@@ -1,0 +1,230 @@
+{"name" : "ACME",
+ "classes" : [
+  {
+    "name" : "ACMEFile",
+    "attributes" : [
+    ]
+  },
+  {
+    "name" : "ACMEEntry",
+    "attributes" : [
+    ]
+  },
+  {
+    "name" : "Element",
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Type",
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "System",
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Representation",
+    "attributes" : [
+    ]
+  },
+  {
+    "name" : "Component",
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "ComponentInstance",
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "instanceOf",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "ComponentType",
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "extend",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Port",
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Connector",
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Role",
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Property",
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "val",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Link",
+    "attributes" : [
+    ]
+  },
+  {
+    "name" : "Attachment",
+    "attributes" : [
+    {
+      "name" : "comp",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "port",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "con",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "role",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  },
+  {
+    "name" : "Binding",
+    "attributes" : [
+    {
+      "name" : "compSrc",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "portSrc",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "compDest",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "portDest",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ]
+  }
+]}

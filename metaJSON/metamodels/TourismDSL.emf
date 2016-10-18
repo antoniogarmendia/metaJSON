@@ -1,0 +1,90 @@
+@namespace(uri="http://miso.es/dsls/tourismDSL.ecore", prefix="ex")
+package example;
+
+class Route {
+  !ordered val Place[*] places;
+  !ordered val Event[*] events;
+  !ordered val Person[*] people;
+}
+
+abstract class Place {
+  attr String[1] name;
+  attr String url;
+  attr String description;
+  attr String openingHours;
+  val Transportation next;
+  !ordered val Opinion[*] opinions;
+  !ordered ref Place[*] nearby;
+}
+
+abstract class Cultural extends Place {
+}
+
+class Museum extends Cultural {
+}
+
+class Theater extends Cultural {
+}
+
+class Sculpture extends Cultural {
+}
+
+class Building extends Cultural {
+}
+
+abstract class Gastronomy extends Place {
+}
+
+class Restaurant extends Gastronomy {
+}
+
+class Bar extends Gastronomy {
+}
+
+class Cafe extends Gastronomy {
+}
+
+class Event {
+  attr String[1] name;
+  attr String description;
+  attr double price;
+  attr String startTime;
+  attr String endTime;
+  ref Place[1] location;
+}
+
+class Transportation {
+  attr TransportationKind[1] kind;
+  attr String description;
+  attr int duration;
+  ref Place[1] to;
+}
+
+class Person {
+  attr String[1] name;
+  ref Place current;
+  !ordered ref Place[*] history;
+}
+
+class Opinion {
+  attr Rate[1] rate = "average";
+  attr String opinion;
+  ref Person[1] from;
+}
+
+enum TransportationKind {
+  any = 0;
+  onFoot = 1;
+  onTrain = 2;
+  onBus = 3;
+  onCar = 4;
+}
+
+enum Rate {
+  terrible = 1;
+  bad = 2;
+  average = 3;
+  good = 4;
+  excellent = 5;
+}
+

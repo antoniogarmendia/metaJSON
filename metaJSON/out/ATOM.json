@@ -1,0 +1,620 @@
+{"name" : "ATOM",
+ "classes" : [
+  {
+    "name" : "ATOM",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "title",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "id",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "subtitle",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "rights",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "icon",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "logo",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    {
+      "name" : "links",
+      "containment" : "true",
+      "target" : "Link",
+      "opposite" : "null",
+      "min" : "1",
+      "max" : "-1"
+    },
+    {
+      "name" : "lastUpdate",
+      "containment" : "true",
+      "target" : "Date",
+      "opposite" : "null",
+      "min" : "1",
+      "max" : "1"
+    },
+    {
+      "name" : "generator",
+      "containment" : "true",
+      "target" : "Generator",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "1"
+    },
+    {
+      "name" : "categories",
+      "containment" : "true",
+      "target" : "Category",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1"
+    },
+    {
+      "name" : "authors",
+      "containment" : "true",
+      "target" : "Author",
+      "opposite" : "null",
+      "min" : "1",
+      "max" : "-1"
+    },
+    {
+      "name" : "contibutors",
+      "containment" : "true",
+      "target" : "Contributor",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1"
+    },
+    {
+      "name" : "entries",
+      "containment" : "true",
+      "target" : "Entry",
+      "opposite" : "atom",
+      "min" : "0",
+      "max" : "-1"
+    }
+    ]
+  },
+  {
+    "name" : "Entry",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "title",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "id",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "rights",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "summary",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    {
+      "name" : "links",
+      "containment" : "true",
+      "target" : "Link",
+      "opposite" : "null",
+      "min" : "1",
+      "max" : "-1"
+    },
+    {
+      "name" : "source",
+      "containment" : "true",
+      "target" : "Source",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "1"
+    },
+    {
+      "name" : "published",
+      "containment" : "true",
+      "target" : "Date",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "1"
+    },
+    {
+      "name" : "lastUpdate",
+      "containment" : "true",
+      "target" : "Date",
+      "opposite" : "null",
+      "min" : "1",
+      "max" : "1"
+    },
+    {
+      "name" : "content",
+      "containment" : "true",
+      "target" : "Content",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "1"
+    },
+    {
+      "name" : "categories",
+      "containment" : "true",
+      "target" : "Category",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1"
+    },
+    {
+      "name" : "authors",
+      "containment" : "true",
+      "target" : "Author",
+      "opposite" : "null",
+      "min" : "1",
+      "max" : "-1"
+    },
+    {
+      "name" : "contibutors",
+      "containment" : "true",
+      "target" : "Contributor",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1"
+    },
+    {
+      "name" : "atom",
+      "containment" : "false",
+      "target" : "ATOM",
+      "opposite" : "entries",
+      "min" : "1",
+      "max" : "1"
+    }
+    ]
+  },
+  {
+    "name" : "Source",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "id",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "icon",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "logo",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "rights",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "title",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "subtitle",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    {
+      "name" : "links",
+      "containment" : "true",
+      "target" : "Link",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1"
+    },
+    {
+      "name" : "lastUpdate",
+      "containment" : "true",
+      "target" : "Date",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "1"
+    },
+    {
+      "name" : "generator",
+      "containment" : "true",
+      "target" : "Generator",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "1"
+    },
+    {
+      "name" : "contributors",
+      "containment" : "true",
+      "target" : "Contributor",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1"
+    },
+    {
+      "name" : "categories",
+      "containment" : "true",
+      "target" : "Category",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1"
+    },
+    {
+      "name" : "author",
+      "containment" : "true",
+      "target" : "Author",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "1"
+    }
+    ]
+  },
+  {
+    "name" : "Content",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "type",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "InLineXHTMLContent",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "type",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "InLineOtherContent",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "type",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "OutOfLineContent",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "type",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "src",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Generator",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "uri",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "version",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Category",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "term",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "scheme",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "label",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Link",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "href",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "rel",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "type",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "hreflang",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "title",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "lenght",
+      "type" : "Integer",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Person",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "uri",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "email",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Author",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "uri",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "email",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Contributor",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "String",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "uri",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "email",
+      "type" : "String",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Date",
+    "abstract" : "false",
+    "attributes" : [
+    {
+      "name" : "day",
+      "type" : "Integer",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "month",
+      "type" : "Integer",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "year",
+      "type" : "Integer",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "hours",
+      "type" : "Integer",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "minutes",
+      "type" : "Integer",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    },
+    {
+      "name" : "seconds",
+      "type" : "Integer",
+      "min" : "1",
+      "max" : "1",
+      "default" : "null"
+    }
+    ],
+    "references" : [
+    ]
+  }
+]}
