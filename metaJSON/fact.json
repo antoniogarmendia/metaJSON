@@ -1,0 +1,276 @@
+{"name" : "Factory",
+ "classes" : [
+  {
+    "name" : "Factory",
+    "abstract" : "false",
+    "root" : "true",
+    "parents" : [],
+    "attributes" : [
+    ],
+    "references" : [
+    {
+      "name" : "elements",
+      "containment" : "true",
+      "target" : "FactoryElement",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1", 
+      "owner" : "Factory"    },
+    {
+      "name" : "workers",
+      "containment" : "true",
+      "target" : "Operator",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1", 
+      "owner" : "Factory"    }
+    ]
+  },
+  {
+    "name" : "FactoryElement",
+    "abstract" : "true",
+    "root" : "false",
+    "parents" : [],
+    "attributes" : [
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Machine",
+    "abstract" : "true",
+    "root" : "false",
+    "parents" : ["FactoryElement"],
+    "attributes" : [
+    {
+      "name" : "busy",
+      "type" : "EBoolean",
+      "min" : "0",
+      "max" : "1",
+      "default" : "false",
+      "owner" : "Machine"    },
+    {
+      "name" : "broken",
+      "type" : "EBoolean",
+      "min" : "0",
+      "max" : "1",
+      "default" : "false",
+      "owner" : "Machine"    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Generator",
+    "abstract" : "false",
+    "root" : "false",
+    "parents" : ["Machine"],
+    "attributes" : [
+    {
+      "name" : "busy",
+      "type" : "EBoolean",
+      "min" : "0",
+      "max" : "1",
+      "default" : "false",
+      "owner" : "Machine"    },
+    {
+      "name" : "broken",
+      "type" : "EBoolean",
+      "min" : "0",
+      "max" : "1",
+      "default" : "false",
+      "owner" : "Machine"    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Assembler",
+    "abstract" : "false",
+    "root" : "false",
+    "parents" : ["Machine"],
+    "attributes" : [
+    {
+      "name" : "busy",
+      "type" : "EBoolean",
+      "min" : "0",
+      "max" : "1",
+      "default" : "false",
+      "owner" : "Machine"    },
+    {
+      "name" : "broken",
+      "type" : "EBoolean",
+      "min" : "0",
+      "max" : "1",
+      "default" : "false",
+      "owner" : "Machine"    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Terminator",
+    "abstract" : "false",
+    "root" : "false",
+    "parents" : ["Machine"],
+    "attributes" : [
+    {
+      "name" : "busy",
+      "type" : "EBoolean",
+      "min" : "0",
+      "max" : "1",
+      "default" : "false",
+      "owner" : "Machine"    },
+    {
+      "name" : "broken",
+      "type" : "EBoolean",
+      "min" : "0",
+      "max" : "1",
+      "default" : "false",
+      "owner" : "Machine"    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Conveyor",
+    "abstract" : "false",
+    "root" : "false",
+    "parents" : ["FactoryElement"],
+    "attributes" : [
+    {
+      "name" : "rate",
+      "type" : "EDouble",
+      "min" : "0",
+      "max" : "1",
+      "default" : "0.0",
+      "owner" : "Conveyor"    }
+    ],
+    "references" : [
+    {
+      "name" : "inputs",
+      "containment" : "false",
+      "target" : "FactoryElement",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1", 
+      "owner" : "Conveyor"    },
+    {
+      "name" : "outputs",
+      "containment" : "false",
+      "target" : "FactoryElement",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1", 
+      "owner" : "Conveyor"    },
+    {
+      "name" : "parts",
+      "containment" : "true",
+      "target" : "Part",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1", 
+      "owner" : "Conveyor"    }
+    ]
+  },
+  {
+    "name" : "Part",
+    "abstract" : "true",
+    "root" : "false",
+    "parents" : [],
+    "attributes" : [
+    {
+      "name" : "ident",
+      "type" : "EString",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null",
+      "owner" : "Part"    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Handle",
+    "abstract" : "false",
+    "root" : "false",
+    "parents" : ["Part"],
+    "attributes" : [
+    {
+      "name" : "ident",
+      "type" : "EString",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null",
+      "owner" : "Part"    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Knob",
+    "abstract" : "false",
+    "root" : "false",
+    "parents" : ["Part"],
+    "attributes" : [
+    {
+      "name" : "ident",
+      "type" : "EString",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null",
+      "owner" : "Part"    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Hammer",
+    "abstract" : "false",
+    "root" : "false",
+    "parents" : ["Part"],
+    "attributes" : [
+    {
+      "name" : "ident",
+      "type" : "EString",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null",
+      "owner" : "Part"    }
+    ],
+    "references" : [
+    ]
+  },
+  {
+    "name" : "Operator",
+    "abstract" : "false",
+    "root" : "false",
+    "parents" : [],
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "EString",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null",
+      "owner" : "Operator"    }
+    ],
+    "references" : [
+    {
+      "name" : "controls",
+      "containment" : "false",
+      "target" : "Machine",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "1", 
+      "owner" : "Operator"    }
+    ]
+  }
+], 
+ "enums" : [
+  {
+    "name" : "MachineStatus",
+    "values" : ["busy", "idle", "broken", "off"]
+  }
+]
+}

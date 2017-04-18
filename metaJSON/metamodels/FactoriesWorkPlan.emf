@@ -1,0 +1,75 @@
+@namespace(uri="http://mondo.org/factoryWP", prefix="factoryWP")
+package Factory;
+
+class Factory {
+  val FactoryElement[*] elements;
+  val Operator[*] workers;
+  val WorkPlan[*] workPlans;
+  val Work[*]     currentWork;
+}
+
+class Work {
+  ref Operator operator;
+  ref Machine  machine;
+  ref WorkPlan plan;
+}
+
+class WorkPlan {
+  attr String 		  maxDate;
+  attr WorkKind		  kind;
+}
+
+enum WorkKind {
+	generate  = 0;
+	assemble  = 1;
+	terminate = 2;
+}
+
+abstract class FactoryElement {
+}
+
+abstract class Machine extends FactoryElement {
+  attr boolean busy;
+  attr boolean broken;
+}
+
+enum MachineStatus {
+  busy = 0;
+  idle = 1;
+  broken = 2;
+  off = 3;
+}
+
+class Generator extends Machine {
+}
+
+class Assembler extends Machine {
+}
+
+class Terminator extends Machine {
+}
+
+class Conveyor extends FactoryElement {
+  ref FactoryElement[*] inputs;
+  ref FactoryElement[*] outputs;
+  attr double rate;
+  val Part[*] parts;
+}
+
+abstract class Part {
+  attr String ident;
+}
+
+class Handle extends Part {
+}
+
+class Knob extends Part {
+}
+
+class Hammer extends Part {
+}
+
+class Operator {
+  attr String name;
+}
+

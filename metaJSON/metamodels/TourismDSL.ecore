@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="example" nsURI="http://miso.es/dsls/tourismDSL.ecore" nsPrefix="ex">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tourismDSLAPI" nsURI="http://miso.es/dsls/tourismDSLAPI.ecore"
+    nsPrefix="ex">
+  <eAnnotations source="geopositioned"/>
   <eClassifiers xsi:type="ecore:EClass" name="Route">
     <eStructuralFeatures xsi:type="ecore:EReference" name="places" ordered="false"
         upperBound="-1" eType="#//Place" containment="true"/>
@@ -14,6 +16,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="openingHours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="readExternal">
+        <details key="policy" value="onOpen"/>
+        <details key="api" value="WeatherAPI"/>
+        <details key="get" value="temp"/>
+        <details key="lat" value="lat"/>
+        <details key="lon" value="lon"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="next" eType="#//Transportation"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="opinions" ordered="false"

@@ -1,4 +1,5 @@
 @namespace(uri="http://miso.es/dsls/tourismDSL.ecore", prefix="ex")
+@geopositioned
 package example;
 
 class Route {
@@ -12,6 +13,8 @@ abstract class Place {
   attr String url;
   attr String description;
   attr String openingHours;
+  @readExternal(policy="onOpen", api="openweather", get="temp", lat="lat", long="long")
+  attr int temperature;
   val Transportation next;
   !ordered val Opinion[*] opinions;
   !ordered ref Place[*] nearby;

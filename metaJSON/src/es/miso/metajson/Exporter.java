@@ -21,6 +21,7 @@ public class Exporter {
 				Resource.Factory.Registry.DEFAULT_EXTENSION,
 				new XMIResourceFactoryImpl()); 
           
+		
         //this.resourceSet.getPackageRegistry().put(EcorePackage.eNS_URI, EcorePackage.eINSTANCE);
 	}
 		

@@ -9,6 +9,9 @@ import java.util.stream.Collectors;
 
 import org.eclipse.emf.ecore.*;
 
+import es.miso.metajson.annotations.AnnotationRegistry;
+import es.miso.metajson.annotations.IAnnotationProcessor;
+
 public class JSONSerializer {
 	private EPackage metamodel;
 	private PrintWriter jsonFile;
@@ -29,8 +32,21 @@ public class JSONSerializer {
 		this.jsonFile.close();
 	}
 	
+	private void serializeAnnotations(EModelElement p, String indent) {
+		this.jsonFile.write(indent+"\"annotations\" : [");
+		for (EAnnotation a: p.getEAnnotations()) {
+			boolean written = false;
+			for (IAnnotationProcessor proc : AnnotationRegistry.registry.get(a.getSource(), p.getClass())) {
+				if (written) this.jsonFile.write(",\n");
+				written = proc.write(p, a, this.jsonFile);
+			}
+		}
+		this.jsonFile.write(indent+"], \n");
+	}
+	
 	private void visit(EPackage p) {
 		this.jsonFile.write("{\"name\" : \""+p.getName()+"\",\n");
+		this.serializeAnnotations(p, "  ");
 		this.jsonFile.write(" \"classes\" : [");
 		boolean first = true;
 		for (EClassifier c : p.getEClassifiers()) {
@@ -116,6 +132,7 @@ public class JSONSerializer {
 		this.jsonFile.write("    \"name\" : \""+clase.getName()+"\",\n");
 		this.jsonFile.write("    \"abstract\" : \""+clase.isAbstract()+"\",\n");
 		this.jsonFile.write("    \"root\" : \""+this.isRoot(c)+"\",\n");
+		this.serializeAnnotations(c, "    ");
 		this.jsonFile.write("    \"parents\" : [");
 		boolean first = true;
 		for (EClass cl : clase.getESuperTypes()) {
@@ -168,6 +185,7 @@ public class JSONSerializer {
 		this.jsonFile.write("      \"min\" : \""+atr.getLowerBound()+"\",\n");
 		this.jsonFile.write("      \"max\" : \""+atr.getUpperBound()+"\",\n");
 		this.jsonFile.write("      \"default\" : \""+atr.getDefaultValue()+"\",\n");
+		this.serializeAnnotations(atr, "      ");
 		this.jsonFile.write("      \"owner\" : \""+atr.getEContainingClass().getName()+"\"");
 		this.jsonFile.write("    }");
 		return true;
