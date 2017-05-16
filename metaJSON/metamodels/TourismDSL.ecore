@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tourismDSLAPI" nsURI="http://miso.es/dsls/tourismDSLAPI.ecore"
-    nsPrefix="ex">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="example" nsURI="http://miso.es/dsls/tourismDSL.ecore" nsPrefix="ex">
   <eAnnotations source="geopositioned"/>
+  <eAnnotations source="userGeo">
+    <details key="name" value="String"/>
+    <details key="age" value="int"/>
+    <details key="married" value="boolean"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Route">
     <eStructuralFeatures xsi:type="ecore:EReference" name="places" ordered="false"
         upperBound="-1" eType="#//Place" containment="true"/>
@@ -19,10 +23,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eAnnotations source="readExternal">
         <details key="policy" value="onOpen"/>
-        <details key="api" value="WeatherAPI"/>
+        <details key="api" value="openweather"/>
         <details key="get" value="temp"/>
         <details key="lat" value="lat"/>
-        <details key="lon" value="lon"/>
+        <details key="long" value="long"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="next" eType="#//Transportation"

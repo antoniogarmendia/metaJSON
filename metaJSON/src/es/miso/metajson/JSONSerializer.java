@@ -38,15 +38,29 @@ public class JSONSerializer {
 			boolean written = false;
 			for (IAnnotationProcessor proc : AnnotationRegistry.registry.get(a.getSource(), p.getClass())) {
 				if (written) this.jsonFile.write(",\n");
-				written = proc.write(p, a, this.jsonFile);
+				if (!proc.isSpecialSection())
+					written = proc.write(p, a, this.jsonFile);
 			}
 		}
 		this.jsonFile.write(indent+"], \n");
 	}
 	
+	private void serializeSpecialSectionAnnotations(EModelElement p, String indent) {
+		boolean written = false;
+		for (EAnnotation a: p.getEAnnotations()) {
+			for (IAnnotationProcessor proc : AnnotationRegistry.registry.get(a.getSource(), p.getClass())) {
+				if (!proc.isSpecialSection()) continue;
+				if (written) this.jsonFile.write(",\n");
+				written = proc.write(p, a, this.jsonFile);
+			}
+		}
+		if (written) this.jsonFile.write(",\n");
+	}
+	
 	private void visit(EPackage p) {
 		this.jsonFile.write("{\"name\" : \""+p.getName()+"\",\n");
 		this.serializeAnnotations(p, "  ");
+		this.serializeSpecialSectionAnnotations(p, "  ");
 		this.jsonFile.write(" \"classes\" : [");
 		boolean first = true;
 		for (EClassifier c : p.getEClassifiers()) {

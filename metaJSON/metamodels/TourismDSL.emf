@@ -1,5 +1,6 @@
 @namespace(uri="http://miso.es/dsls/tourismDSL.ecore", prefix="ex")
 @geopositioned
+@userGeo(name="String", age="int", married="boolean")
 package example;
 
 class Route {

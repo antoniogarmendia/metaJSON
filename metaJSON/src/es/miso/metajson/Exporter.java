@@ -46,7 +46,7 @@ public class Exporter {
 			return;
 		}
 		else exp.export(args[0], args[1]);
-		//exp.export("./metamodels/DFAAutomaton.ecore", "./out/DFAAutomaton.json");
+		//exp.export("./metamodels/TourismDSL.ecore", "./out/TourismDSL.json");
 	}
 
 }
