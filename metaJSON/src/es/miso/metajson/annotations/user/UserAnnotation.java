@@ -20,6 +20,8 @@ public class UserAnnotation implements IAnnotationProcessor{
 				file.write("     \"type\": \""+a.getDetails().get(key)+"\", \n");
 				file.write("     \"min\": \"0\", \n");
 				file.write("     \"max\": \"1\", \n");
+				file.write("     \"owner\": \"user\", \n");
+				file.write("     \"annotations\": [], \n");
 				file.write("     \"default\": \"\"}");
 				first = false;
 			}
