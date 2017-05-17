@@ -3,6 +3,7 @@ package es.miso.metajson.annotations;
 import java.util.*;
 
 import es.miso.metajson.annotations.apis.ReadExternalAnnotation;
+import es.miso.metajson.annotations.device.ReadDeviceAnnotation;
 import es.miso.metajson.annotations.geo.GeopositionedAnnotation;
 import es.miso.metajson.annotations.user.UserAnnotation;
 
@@ -13,6 +14,7 @@ public final class AnnotationRegistry {
 	private AnnotationRegistry(){
 		this.register(new GeopositionedAnnotation());
 		this.register(new ReadExternalAnnotation());
+		this.register(new ReadDeviceAnnotation());
 		this.register(new UserAnnotation());
 	}
 	

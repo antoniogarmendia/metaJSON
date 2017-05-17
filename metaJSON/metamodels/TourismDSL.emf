@@ -10,9 +10,11 @@ class Route {
 }
 
 abstract class Place {
+  @readDevice(device="dev.identifier")
   attr String[1] name;
   attr String url;
-  attr String description;
+  attr String description;  
+  @readDevice(device="dev.hour")
   attr String openingHours;
   @readExternal(policy="onOpen", api="openweather", get="temp", lat="lat", long="long")
   attr int temperature;
