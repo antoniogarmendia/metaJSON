@@ -11,7 +11,7 @@ public class UserAnnotation implements IAnnotationProcessor{
 	@Override
 	public boolean write(EObject context, EAnnotation a, PrintWriter file) {
 		if (context instanceof EPackage) {
-			file.write("  \"user\" = {");
+			file.write("  \"user\" : {");
 			file.write("\"attributes\" : [\n");
 			boolean first = true;
 			for (String key : a.getDetails().keySet()) {

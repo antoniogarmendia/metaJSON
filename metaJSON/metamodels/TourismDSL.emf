@@ -1,4 +1,4 @@
-@namespace(uri="http://miso.es/dsls/tourismDSL.ecore", prefix="ex")
+@namespace(uri="http://miso.es/dsls/tourismDSLdevice.ecore", prefix="ex")
 @geopositioned
 @userGeo(name="String", age="int", married="boolean")
 package example;
@@ -10,11 +10,11 @@ class Route {
 }
 
 abstract class Place {
-  @readDevice(device="dev.identifier")
+  @readDevice(device="dev.identifier", policy="onOpen")
   attr String[1] name;
   attr String url;
   attr String description;  
-  @readDevice(device="dev.hour")
+  @readDevice(device="dev.hour", policy="onOpen")
   attr String openingHours;
   @readExternal(policy="onOpen", api="openweather", get="temp", lat="lat", long="long")
   attr int temperature;

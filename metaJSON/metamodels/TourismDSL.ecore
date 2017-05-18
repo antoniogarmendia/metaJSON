@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="example" nsURI="http://miso.es/dsls/tourismDSL.ecore" nsPrefix="ex">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="example" nsURI="http://miso.es/dsls/tourismDSLdevice.ecore"
+    nsPrefix="ex">
   <eAnnotations source="geopositioned"/>
   <eAnnotations source="userGeo">
     <details key="name" value="String"/>
@@ -19,6 +20,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="readDevice">
         <details key="device" value="dev.identifier"/>
+        <details key="policy" value="onOpen"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -26,6 +28,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="openingHours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="readDevice">
         <details key="device" value="dev.hour"/>
+        <details key="policy" value="onOpen"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
