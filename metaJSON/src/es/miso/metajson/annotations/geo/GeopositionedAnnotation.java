@@ -11,7 +11,11 @@ public class GeopositionedAnnotation implements IAnnotationProcessor{
 	@Override
 	public boolean write(EObject context, EAnnotation a, PrintWriter file) {
 		if (context instanceof EPackage) {
-			file.write("  {\"isgeo\" : \"true\"}");
+			file.write("  {\"isgeo\" : \"true\"");
+			for (String key : a.getDetails().keySet()) {
+				file.write(", \""+key+"\": \""+ a.getDetails().get(key)+"\"");
+			}
+			file.write("}\n");
 		}
 		return false;
 	}

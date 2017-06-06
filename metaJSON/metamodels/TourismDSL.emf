@@ -1,5 +1,5 @@
 @namespace(uri="http://miso.es/dsls/tourismDSLdevice.ecore", prefix="ex")
-@geopositioned
+@geopositioned(pinImage="http://images.clipartpanda.com/pin-clipart-shit-clipart-board-pin-clip-art_433076.jpg", privacity="privateData")
 @userGeo(name="String", age="int", married="boolean")
 package example;
 

@@ -2,7 +2,10 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="example" nsURI="http://miso.es/dsls/tourismDSLdevice.ecore"
     nsPrefix="ex">
-  <eAnnotations source="geopositioned"/>
+  <eAnnotations source="geopositioned">
+    <details key="pinImage" value="http://images.clipartpanda.com/pin-clipart-shit-clipart-board-pin-clip-art_433076.jpg"/>
+    <details key="privacity" value="publicData"/>
+  </eAnnotations>
   <eAnnotations source="userGeo">
     <details key="name" value="String"/>
     <details key="age" value="int"/>
