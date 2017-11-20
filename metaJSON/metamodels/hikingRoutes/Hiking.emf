@@ -1,0 +1,42 @@
+@namespace(uri="http://miso.es/dsls/Hiking.ecore", prefix="hik")
+@geopositioned(privacity="privateData")
+@userGeo(name="String", age="int", expertise="ExperienceLevel")
+package HikingRoutes;
+
+class Route {
+  attr String name;
+  attr String description;
+  attr double lengthKm;
+  attr double timeHours;
+  attr double slopeKm;
+  attr boolean isCircular;
+  attr Level level;
+  !ordered val Point[*] points;
+}
+
+enum Level {
+	easy = 1;
+	medium = 2;
+	advanced = 3;
+}
+
+abstract class Point {
+  attr String[0..1] comment;
+  ref Point[0..1] nextMain;
+  ref Point[0..*] alternatives;
+}
+
+class InitialPoint extends Point{}
+
+class FinalPoint extends Point{}
+
+class PointOfInterest extends Point{}
+
+enum ExperienceLevel {
+  beginner = 1;
+  medium = 2;
+  experienced = 3;
+  advanced = 4;
+  master = 5;
+}
+

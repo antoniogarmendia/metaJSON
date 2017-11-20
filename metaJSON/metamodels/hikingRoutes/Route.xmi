@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hik:Route xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hik="http://miso.es/dsls/Hiking.ecore" xsi:schemaLocation="http://miso.es/dsls/Hiking.ecore Hiking.ecore">
+  <points xsi:type="hik:InitialPoint" nextMain="//@points.1" alternatives="//@points.2"/>
+  <points xsi:type="hik:PointOfInterest" comment="intersection km 45" nextMain="//@points.2"/>
+  <points xsi:type="hik:FinalPoint"/>
+</hik:Route>

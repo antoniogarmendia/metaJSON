@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="HikingRoutes" nsURI="http://miso.es/dsls/Hiking.ecore" nsPrefix="hik">
+  <eAnnotations source="geopositioned">
+    <details key="privacity" value="privateData"/>
+  </eAnnotations>
+  <eAnnotations source="userGeo">
+    <details key="name" value="String"/>
+    <details key="age" value="int"/>
+    <details key="expertise" value="ExperienceLevel"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Route">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lengthKm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeHours" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="slopeKm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCircular" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//Level"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="points" ordered="false"
+        upperBound="-1" eType="#//Point" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Level">
+    <eLiterals name="easy" value="1"/>
+    <eLiterals name="medium" value="2"/>
+    <eLiterals name="advanced" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Point" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextMain" eType="#//Point"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alternatives" upperBound="-1"
+        eType="#//Point"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InitialPoint" eSuperTypes="#//Point"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FinalPoint" eSuperTypes="#//Point"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PointOfInterest" eSuperTypes="#//Point"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ExperienceLevel">
+    <eLiterals name="beginner" value="1"/>
+    <eLiterals name="medium" value="2"/>
+    <eLiterals name="experienced" value="3"/>
+    <eLiterals name="advanced" value="4"/>
+    <eLiterals name="master" value="5"/>
+  </eClassifiers>
+</ecore:EPackage>
