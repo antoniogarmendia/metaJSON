@@ -27,9 +27,17 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Point" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextMain" eType="#//Point"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextMain" eType="#//Point">
+      <eAnnotations source="route">
+        <details key="type" value="walking"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="alternatives" upperBound="-1"
-        eType="#//Point"/>
+        eType="#//Point">
+      <eAnnotations source="route">
+        <details key="type" value="walking"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InitialPoint" eSuperTypes="#//Point"/>
   <eClassifiers xsi:type="ecore:EClass" name="FinalPoint" eSuperTypes="#//Point"/>

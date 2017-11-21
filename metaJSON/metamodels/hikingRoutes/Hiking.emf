@@ -1,6 +1,6 @@
-@namespace(uri="http://miso.es/dsls/Hiking.ecore", prefix="hik")
 @geopositioned(privacity="privateData")
 @userGeo(name="String", age="int", expertise="ExperienceLevel")
+@namespace(uri="http://miso.es/dsls/Hiking.ecore", prefix="hik")
 package HikingRoutes;
 
 class Route {
@@ -15,22 +15,27 @@ class Route {
 }
 
 enum Level {
-	easy = 1;
-	medium = 2;
-	advanced = 3;
+  easy = 1;
+  medium = 2;
+  advanced = 3;
 }
 
 abstract class Point {
-  attr String[0..1] comment;
-  ref Point[0..1] nextMain;
-  ref Point[0..*] alternatives;
+  attr String comment;
+  @route(type="walking")
+  ref Point nextMain;
+  @route(type="walking")
+  ref Point[*] alternatives;
 }
 
-class InitialPoint extends Point{}
+class InitialPoint extends Point {
+}
 
-class FinalPoint extends Point{}
+class FinalPoint extends Point {
+}
 
-class PointOfInterest extends Point{}
+class PointOfInterest extends Point {
+}
 
 enum ExperienceLevel {
   beginner = 1;
