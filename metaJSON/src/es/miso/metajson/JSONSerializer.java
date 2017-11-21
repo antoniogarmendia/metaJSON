@@ -187,6 +187,9 @@ public class JSONSerializer {
 		
 		this.jsonFile.write("      \"min\" : \""+ref.getLowerBound()+"\",\n");
 		this.jsonFile.write("      \"max\" : \""+ref.getUpperBound()+"\", \n");
+		
+		this.serializeAnnotations(ref, "      ");
+		
 		this.jsonFile.write("      \"owner\" : \""+ref.getEContainingClass().getName()+"\"");
 		this.jsonFile.write("    }");
 		return true;

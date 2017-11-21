@@ -1,0 +1,262 @@
+{"name" : "HikingRoutes",
+  "annotations" : [  {"isgeo" : "true", "privacity": "privateData"}
+  ], 
+  "user" : {"attributes" : [
+   { "name": "expertise", 
+     "type": "ExperienceLevel", 
+     "min": "0", 
+     "max": "1", 
+     "owner": "user", 
+     "annotations": [], 
+     "default": ""},
+   { "name": "name", 
+     "type": "String", 
+     "min": "0", 
+     "max": "1", 
+     "owner": "user", 
+     "annotations": [], 
+     "default": ""},
+   { "name": "age", 
+     "type": "int", 
+     "min": "0", 
+     "max": "1", 
+     "owner": "user", 
+     "annotations": [], 
+     "default": ""}  ] },
+ "classes" : [
+  {
+    "name" : "Route",
+    "abstract" : "false",
+    "root" : "true",
+    "annotations" : [    ], 
+    "parents" : [],
+    "attributes" : [
+    {
+      "name" : "name",
+      "type" : "EString",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null",
+      "annotations" : [      ], 
+      "owner" : "Route"    },
+    {
+      "name" : "description",
+      "type" : "EString",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null",
+      "annotations" : [      ], 
+      "owner" : "Route"    },
+    {
+      "name" : "lengthKm",
+      "type" : "EDouble",
+      "min" : "0",
+      "max" : "1",
+      "default" : "0.0",
+      "annotations" : [      ], 
+      "owner" : "Route"    },
+    {
+      "name" : "timeHours",
+      "type" : "EDouble",
+      "min" : "0",
+      "max" : "1",
+      "default" : "0.0",
+      "annotations" : [      ], 
+      "owner" : "Route"    },
+    {
+      "name" : "slopeKm",
+      "type" : "EDouble",
+      "min" : "0",
+      "max" : "1",
+      "default" : "0.0",
+      "annotations" : [      ], 
+      "owner" : "Route"    },
+    {
+      "name" : "isCircular",
+      "type" : "EBoolean",
+      "min" : "0",
+      "max" : "1",
+      "default" : "false",
+      "annotations" : [      ], 
+      "owner" : "Route"    },
+    {
+      "name" : "level",
+      "type" : "Level",
+      "min" : "0",
+      "max" : "1",
+      "default" : "easy",
+      "annotations" : [      ], 
+      "owner" : "Route"    }
+    ],
+    "references" : [
+    {
+      "name" : "points",
+      "containment" : "true",
+      "target" : "Point",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1", 
+      "annotations" : [      ], 
+      "owner" : "Route"    }
+    ]
+  },
+  {
+    "name" : "Point",
+    "abstract" : "true",
+    "root" : "false",
+    "annotations" : [    ], 
+    "parents" : [],
+    "attributes" : [
+    {
+      "name" : "comment",
+      "type" : "EString",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null",
+      "annotations" : [      ], 
+      "owner" : "Point"    }
+    ],
+    "references" : [
+    {
+      "name" : "nextMain",
+      "containment" : "false",
+      "target" : "Point",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "1", 
+      "annotations" : [{ "route": "true", "type": "walking"}      ], 
+      "owner" : "Point"    },
+    {
+      "name" : "alternatives",
+      "containment" : "false",
+      "target" : "Point",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1", 
+      "annotations" : [{ "route": "true", "type": "walking"}      ], 
+      "owner" : "Point"    }
+    ]
+  },
+  {
+    "name" : "InitialPoint",
+    "abstract" : "false",
+    "root" : "false",
+    "annotations" : [    ], 
+    "parents" : ["Point"],
+    "attributes" : [
+    {
+      "name" : "comment",
+      "type" : "EString",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null",
+      "annotations" : [      ], 
+      "owner" : "Point"    }
+    ],
+    "references" : [
+    {
+      "name" : "nextMain",
+      "containment" : "false",
+      "target" : "Point",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "1", 
+      "annotations" : [{ "route": "true", "type": "walking"}      ], 
+      "owner" : "Point"    },
+    {
+      "name" : "alternatives",
+      "containment" : "false",
+      "target" : "Point",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1", 
+      "annotations" : [{ "route": "true", "type": "walking"}      ], 
+      "owner" : "Point"    }
+    ]
+  },
+  {
+    "name" : "FinalPoint",
+    "abstract" : "false",
+    "root" : "false",
+    "annotations" : [    ], 
+    "parents" : ["Point"],
+    "attributes" : [
+    {
+      "name" : "comment",
+      "type" : "EString",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null",
+      "annotations" : [      ], 
+      "owner" : "Point"    }
+    ],
+    "references" : [
+    {
+      "name" : "nextMain",
+      "containment" : "false",
+      "target" : "Point",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "1", 
+      "annotations" : [{ "route": "true", "type": "walking"}      ], 
+      "owner" : "Point"    },
+    {
+      "name" : "alternatives",
+      "containment" : "false",
+      "target" : "Point",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1", 
+      "annotations" : [{ "route": "true", "type": "walking"}      ], 
+      "owner" : "Point"    }
+    ]
+  },
+  {
+    "name" : "PointOfInterest",
+    "abstract" : "false",
+    "root" : "false",
+    "annotations" : [    ], 
+    "parents" : ["Point"],
+    "attributes" : [
+    {
+      "name" : "comment",
+      "type" : "EString",
+      "min" : "0",
+      "max" : "1",
+      "default" : "null",
+      "annotations" : [      ], 
+      "owner" : "Point"    }
+    ],
+    "references" : [
+    {
+      "name" : "nextMain",
+      "containment" : "false",
+      "target" : "Point",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "1", 
+      "annotations" : [{ "route": "true", "type": "walking"}      ], 
+      "owner" : "Point"    },
+    {
+      "name" : "alternatives",
+      "containment" : "false",
+      "target" : "Point",
+      "opposite" : "null",
+      "min" : "0",
+      "max" : "-1", 
+      "annotations" : [{ "route": "true", "type": "walking"}      ], 
+      "owner" : "Point"    }
+    ]
+  }
+], 
+ "enums" : [
+  {
+    "name" : "Level",
+    "values" : ["easy", "medium", "advanced"]
+  },
+  {
+    "name" : "ExperienceLevel",
+    "values" : ["beginner", "medium", "experienced", "advanced", "master"]
+  }
+]
+}
