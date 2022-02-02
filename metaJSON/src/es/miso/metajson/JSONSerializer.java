@@ -84,7 +84,8 @@ public class JSONSerializer {
 	}
 	
 	private boolean isRoot (EClassifier c) {
-		if (!(c instanceof EClass)) return false;
+		return false;
+		/*if (!(c instanceof EClass)) return false;
 		if (((EClass)c).isAbstract()) return false;
 		EPackage p = c.getEPackage();
 		for (EClassifier cl : p.getEClassifiers()) {
@@ -92,7 +93,7 @@ public class JSONSerializer {
 			if (((EClass) cl).isAbstract()) continue;				
 			if (!isContained((EClass)cl, (EClass)c, new ArrayList<EClass>())) return false;
 		}
-		return true;
+		return true;*/
 	}
 	
 	private List<EClass> getAllSubTypes ( EClass c ) {
@@ -117,8 +118,11 @@ public class JSONSerializer {
 				if (this.isContained(containee, target, visited)) return true;
 				// now check all children of target
 				for (EClass sub : this.getAllSubTypes(target)) {
+					//visited.add(sub);
+					//if (visited.contains(sub)) continue;
 					if (this.isContained(containee, sub, visited)) return true;
 				}
+				//visited.removeAll(this.getAllSubTypes(target));
 			}
 		}
 		visited.remove(container);
